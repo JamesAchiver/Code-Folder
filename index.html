@@ -5,7 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <style>
+        .box-container {
+            box-sizing: border-box;
+            background: linear-gradient(90deg,lightgreen 10%,blue 125%);
+            height: 250px;
+            width: 80%;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 100px ;
+            cursor: pointer;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-container:hover{
+            background: linear-gradient(to right, #434343 0%, black 100%);
+        }
+
+    </style>
 </head>
 <body>
     <h1>Hello World!</h1>
@@ -150,8 +169,10 @@
             <td>1330000</td>
         </tr>
     </table>
-    
+    <hr>
 
+    <a href="/Calculater/try1.html">
+    <div class="box-container">Click me </div></a>
 
 </body>
 </html>
