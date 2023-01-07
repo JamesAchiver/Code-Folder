@@ -1,5 +1,5 @@
 
-// They are the Offical Variables That are made from video:
+// They are the Offical Variables That are made Raw:
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
