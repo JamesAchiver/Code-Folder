@@ -1,0 +1,49 @@
+This File Shows the Pesudo-code For the Calculator Development !
+
+Pesudo-code for newCalc.js file ;
+
+Create class names Calculator and inside it create a constructor function();
+The constructor will contain two parameters ,the constructor takes previous & current operand + as well as Clear() ;
+Inside class there are 7 function that define the working of Calculator :
+    -- Clear()
+    -- delete()
+    -- chooseOperation()
+    -- compute()
+    -- appendNumber()
+    -- getDisplayNumber()
+    -- updateDisplay()
+
+After class HTML Element arelinked with querySelectorALl(), querySelector()
+Creatinhg variable type object named Calculator and will have two parameters .
+So, there will be two types of selection multiple and single , multiple are linked by querySelectorAll() and single by querySelector().
+//--> numberButtons and operationButton are called by "Multiple Selector" and other -- 
+    -- equal
+    -- allClear 
+    -- delete 
+    -- button
+are called by single selector .
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Defining "on-click" Working of Buttons   
+
+--> On Defining numberButtons
+    the variable numberButton "notated" with forEach function containing argument "Button"
+    that is also "notated" with Arrow function for Defining Working of Button.
+    --- inside Arrow Function the Event Listener is added with the button only when "Click",
+        the performance of Event listener isto run appendNumber function And updateDisplay function .
+
+--> On Defining operationButtons
+    the variable operationButtons "notated" with forEach function containing argument "Button"
+    that is also "notated" with Arrow function for Defining Working of Button.
+    --- inside Arrow Function the Event Listener is added with the button only when "Click",
+        the performance of Event listener isto run chooseOperation function And updateDisplay function .
+
+//--> defining of working Single Selector
+
+--> equalButton are notated with Event Listener with the "on-click" property and the performance is to run compute function and updateDisplay function .
+--> allClearButton are notated with Event Listener with the "on-click" property and the performance is to run clear function and updateDisplay function .
+--> deleteButton are notated with Event Listener with the "on-click" property and the performance is to run delete function and updateDisplay function .
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
