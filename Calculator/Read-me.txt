@@ -20,7 +20,7 @@ So, there will be two types of selection multiple and single , multiple are link
     -- equal
     -- allClear 
     -- delete 
-    -- button
+    -- operands
 are called by single selector .
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,12 +32,14 @@ Defining "on-click" Working of Buttons
     that is also "notated" with Arrow function for Defining Working of Button.
     --- inside Arrow Function the Event Listener is added with the button only when "Click",
         the performance of Event listener isto run appendNumber function And updateDisplay function .
+        "inside the appendNumber Function the inner Text of button is used ".
 
 --> On Defining operationButtons
     the variable operationButtons "notated" with forEach function containing argument "Button"
     that is also "notated" with Arrow function for Defining Working of Button.
     --- inside Arrow Function the Event Listener is added with the button only when "Click",
         the performance of Event listener isto run chooseOperation function And updateDisplay function .
+        "inside the chooseOperation Function the inner Text of button is used ".
 
 //--> defining of working Single Selector
 
@@ -47,3 +49,99 @@ Defining "on-click" Working of Buttons
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+///----> Defining the Actuall Working of "Calculator functions":
+
+--> Explaining the Clear Function : 
+  > inside the Calculator class , after Constructor ;
+  > Clear function will have a Scope ;
+  > To Clear all the number & operation from current and previous operand in the whole output area ;
+  > the this keyword is used to make current & previous operand is equal to "Empty string";
+  > and this , operation will be equal to undefined;
+
+--> Explaining the Delete Function :
+  > after clear function delete will have a scope ;
+  > this delete function will delete only one number from the back side 
+    that was recently added to the current operand;
+  > first we will assign the value of current operand to current oprand with 
+   the help of this keyword ;
+  > the right hand side of current operand is notated with the 
+  toString function , and also got notated with slice function ;
+  > the value of slice argument represent the recently added number
+   this -- "(0,1)";
+   
+--> Explaining the ChooseOperation function :
+  > after the delete function this function will also have scope;
+  > the ChooseOperation function will take a Parameter for the operation 
+   the name of the parameter will be "operation";
+  > the working of this function is use an operation in calculator :
+    and to any time use an operation ;
+  > we will use a if conditional :
+   - the condition will be that if the this current operand is strictly equal to empty string ;
+   - then the function will do nothing that is simply the word "return";
+  > the second if conditional ;
+   -- this condition will define that if the previous operand is strictly 
+    not equal to empty string then the "compute function " will be executed ;
+  > after that the "this operation property" will be equal to "opration parameter";
+
+  > Below the code represents that we are done typing in current oprand :
+    - this basically means that the value of previous oprand will be equal to
+     the value of current oprand , at the time of clicking equalButton;
+
+     > so , "this property previous operand" is equal to "this property current oprand";
+     > and exact after that this "property current oprand" will be empty ;
+     > END :) !
+
+
+--> Explaining the Compute Function :
+  > this will also have a scope ;
+  > define a new let Variable name "computation" - reffers to the result value after compute function();
+  -> Two New const Variables holding some value :
+    - 1) the prev variable will be assigned the value of "this property previous oprand" in a parse float format ;
+    - 2) the current variable will be assigned the valur of "this property current oprand" in a parse float format ;
+  -> There will a if conditional for confirm that the input value is a number :
+    - the condition will use isNaN Function to confirm that the input value is a number ;
+    - we will take "prev" variable as a argument in isNaN function ;
+    - inside the condition add a "||" or ;
+    - we will take "current" variable as a argument in isNaN function ;
+    - and simply retrun - that indicate the function ;
+  -> Now We will create a Switch :
+    :- the switch argument will  the "this property operation" & and will have a scope ;
+    >  Case 1 will the addition :
+       - that is the variable is equal to the value of the addition of "prev & current" variables ;
+       - break ;
+    >  Case 2 will be subtraction :
+      - variable computation will be equal to the subtraction of "prev & current" variabel ;
+      - break
+    >  Case 3 will be the Multiplication :
+      - variable computation will be equal to the multiplication of "prev & current" variables ;
+      -break 
+    >  Case 4 will be of Devide :
+      - Variable of computation will be equal to the division of "prev & current" Variables ;
+      - break
+    > The Default Value Case :
+      - is simply return ;
+
+  -> This Process show the compute value will be equal to Current oprand :
+    - this show that How Output will be Displayed ;
+    - the "this current oprand property" will be equal to "computation" variable ;
+    - the "this operation property" will be equal to undefined ;
+    - and last the "this previous operand property" will be equal to "empty" string ;
+    _ End :) ;
+
+--> Explaining the Append Number Function :
+   - the function will have a parameter named 'number' difine the added number in the operad ;
+   - the function will also have a scope ;
+  -> The IF Condistional :
+    - in this condition we say that :
+    - if the "number parameter" is strictly equal to "dot,'.'" ;
+    - and we have to check that the current operand contains ".";
+    - for this inside with an "and" keyword the "this current oprand property" is 
+    - is notated by includes() function containing '.' ;
+    - after that simple return ;
+  -> for make the value in current operand a string :
+    - the "this current oprand property" will be equal to "this current operand property" ;
+    - the right hand side of current oprand property is notated with toString() "to convert the value to string inside the current operand";
+    - after that still in the right hand side the "number parameter" is notated with toString() function :
+    to convert the "number Parameter" into an string value and gets added in the current oprand ;
+    - END :)  
+  
