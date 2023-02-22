@@ -1,3 +1,5 @@
+
+
 This File Shows the Pesudo-code For the Calculator Development !
 
 Pesudo-code for newCalc.js file ;
@@ -67,7 +69,7 @@ Defining "on-click" Working of Buttons
   > the right hand side of current operand is notated with the 
   toString function , and also got notated with slice function ;
   > the value of slice argument represent the recently added number
-   this -- "(0,1)";
+   this -- "(0,-1)";
    
 --> Explaining the ChooseOperation function :
   > after the delete function this function will also have scope;
@@ -145,3 +147,49 @@ Defining "on-click" Working of Buttons
     to convert the "number Parameter" into an string value and gets added in the current oprand ;
     - END :)  
   
+--> Explaining the getDisplayNumber() function :
+   - the function will have a parameter named "number" ;
+   -> Creation of the 3 const variable and 1 let variable ;
+     > 1.) name 'stringNumber' this variable will be equal to number parameter that is notated with to String function ;
+     > 2.) name 'integerDigits' this variable will be equal to the parsed float function : 
+       - the argument of parsed is 'stringNumber' variable that is notated with split function having the '.' argument
+       - and still the split function get notated with "square bracket" have a value of `0` ;
+    > 3.) name decimalDigits variable is equal to "stringNumber" variable that is notated with split function 
+      - having the argument `.` after also 'square bracket' notated with a value of `1`;
+    
+    > the 'let' variable named integerDisplay;
+   -> creating a IF Condistional :
+    - the condition is the 'integerDigits' variable should be a number ;
+    then intergerDisplay wil be equal to empty string ;
+    - in the else condistion the integerDisplay will be equal to 
+     'integerDigits' variable notated with toLocaleString() function 
+      this function have argument named "en" [repesenting the english ]
+      and the other argument is inside the curly brackets named `maximumFractionDigits : 0` ;
+      else statement ended ! ;
+   -> Second IF conditional :
+    - the consdtion is 'decimalDigits' variable will `not` equal to `null` ;
+    then the "return" and interpolation is used containing 'integerDisplay'
+    and in continuation still interpolation is got notated containing 'decimal digits' variable ;
+    - the else condition will `return` intergerDisplay variable ; NOTE interpolation should be in `one back inverted dash ` that is ``
+
+    -- EnD of this function :) !!!
+
+--> Explaining the updateDisplay function :
+   -> // TO update the Calculator display after a respective Calculation ;
+   - so the "this currentOperandTextElement Property " is notated with the innerText and will be equal to 
+     `this get display number function` inside { 'this current operand peroperty'} ;
+   -> the creattion on IF conditional :
+    - the condition is that the `this operation property` will 'not' be equal to `null` ;
+    then the :
+       'this previousOperandTextElement property' notated with inner Text will be equal to 
+        interpolation :
+          - `this get display number function` inside { 'this previous operand property'}
+          then again in continuation notated interpolation containing 'this operation peroperty' ;
+          hence the condition result ended here ! 
+    - else condition :
+       'this previousOperandTextElement' natated with innnerText peroperty will be equal to 'empty string '
+
+    -- > END OF THE Function ! :) 
+
+    Bye Javascript !!!
+

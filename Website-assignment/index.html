@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website practise -1</title>
+    <link rel="stylesheet" href="/Website-assignment/style.css">
+    <style>
+        ul{
+    list-style-type: none;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+nav {
+    position: fixed;
+    background: #1b1b1b;
+    width: 100%;
+    padding: 10px 0px; 
+    z-index: 12;
+}
+
+nav .menu {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.menu .logo a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.menu ul{
+    display: inline-flex;
+}
+
+.menu ul li {
+    list-style-type: none;
+    margin-left: 7px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.menu ul li a:hover{
+    background: #fff;
+    color: #000;
+}
+
+.img{
+    background: url(/Website-assignment/Trail-1.jpg) no-repeat;
+    height:100vh;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.img::before {
+
+    content: '';
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    background: rgba(0,0,0,0.3)
+}
+
+.center{
+    position: absolute;
+    top: 52%;
+    left:50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    padding: 0 20px;
+    text-align: center;
+}
+
+.center .title {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.center .sub_title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.center .buttons{
+    margin-top: 25px;
+}
+
+.center .buttons button {
+    height: 45px;
+    width: 170px;
+    border-radius: 12px;
+    border: none;
+    margin: 0 10px;
+    border: 2px solid #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 10px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3 ease;
+}
+
+.sectiom-2 {
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: medium;
+    font-size: 20px;
+
+}
+
+.center .buttons button:hover {
+    background-color:transparent;
+    color: #fff;
+}
+
+#middle-img {
+    height: 400px;
+    width: 400px;
+    margin: 50px;
+    float: left;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="#">Website</a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--image-middle-section-->
+    <div class="img"></div>
+    <!--Middle_Section-->
+    <div class="center">
+        <div class="title">Created By Yash James</div>
+        <div class="sub_title">Pure HTML & CSS </div>
+        <div class="buttons">
+            <a href="/Website-assignment/second-page.html">
+                <button>Details</button>
+            </a>
+            <a href="#">
+                <button>Details</button>
+            </a>
+        </div>
+    </div>
+    <hr>
+    <img src="/Website-assignment/trail-3.jpg" alt="" id="middle-img">
+    <div class="section-2">
+        <div style="height:600;margin: 100px;">
+            <h1>Details</h1>
+            <p style="line-height:2.0;font-size: 20px;">
+            Name : YASH JAMES, <br>
+            Course : B.COM (Programe),<br>
+            Section : B, <br>
+            Roll Number : 20222520,<br>
+            Subject : Front End Web Development, <br>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
